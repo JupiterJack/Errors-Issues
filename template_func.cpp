@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 template<typename T>
 void swap(T &a, T &b)
 {
@@ -24,12 +22,12 @@ int main()
     int a = 10;
     int b = 20;
     swap(a, b);
-    cout << "a: " << a << "\tb: " << b << "\n";
+    std::cout << "a: " << a << "\tb: " << b << "\n";
 
-    string first_name = "Jupiter";
-    string last_name = "Jack";
+    std::string first_name = "Jupiter";
+    std::string last_name = "Jack";
     swap(first_name, last_name);
-    cout << first_name << " " << last_name << endl;
+    std::cout << first_name << " " << last_name << std::endl;
     
     return 0;
 }
