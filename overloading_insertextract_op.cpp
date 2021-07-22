@@ -62,7 +62,7 @@ int add_user_if_not_exists(std::vector<User> &users, User user)
     return users.size() - 1;
 }
 
-std::ostream& operator << (std::ostream output, User user)
+std::ostream& operator << (std::ostream& output, User& user)
 {
     output << "First name: " << user.first_name << "\nLast name: " << user.last_name << std::endl;
     return output;
