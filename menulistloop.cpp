@@ -2,35 +2,37 @@
 
 int main()
 {
-    bool gate = false;
+    bool gate = true;
     std::string select;
     std::string learn = "learn", meditate = "meditate", focus = "focus";
 
      while(gate)
     {
         std::cout << learn << "\n" << meditate << "\n" << focus << std::endl;
+        std::cout << "\n";
         std::cin >> select;
         do{
             if(select == learn)
             {
-                std::cout << "Attain more knowledge human" << std::endl;
-                gate;
+                std::cout << "\n" << "Attain more knowledge human" << std::endl;
+                gate = false;
             }
             else if(select == meditate)
             {
-                std::cout << "Relax yourself" << std::endl;
-                gate;
+                std::cout << "\n" << "Relax yourself" << std::endl;
+                gate = false;
             }
             else if(select == focus)
             {
-                std::cout << "Concentrate.." << std::endl;
-                gate;
+                std::cout << "\n" << "Concentrate.." << std::endl;
+                gate = false;
             }
             else
             {
-                std::cout << "Err: Cognition Overload!" << std::endl;
+                std::cout << "\n" << "Err: Cognition Overload!" << std::endl;
+                break;
             }
-        }while(gate == true);
+        }while(gate);
     }
 }
 
